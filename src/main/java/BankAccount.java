@@ -22,7 +22,15 @@ public class BankAccount {
 
 
     //methods
+    public void deposit(double depositAmount) {
+        balance += depositAmount;
+        System.out.println( "You've successfully deposited your money. Your new balance is: " + balance);
+    };
 
+    public void withdrawal(double withdrawalAmount) {
+        balance -= withdrawalAmount;
+        System.out.println("You've successfully withdrawn your money. Your new balance is: " + balance);
+    }
 
 
     //Getters & Setters
