@@ -7,7 +7,7 @@ public class BankAccount {
     private String lastName;
     private LocalDate dateOfBirth = LocalDate.of(1998, 9, 12);
     private int accountNumber;
-    private double balance = 0;
+    private double balance = 500;
 
 
     //constructor
@@ -21,15 +21,23 @@ public class BankAccount {
     }
 
 
+
+
     //methods
-    public void deposit(double depositAmount) {
+    public double deposit(double depositAmount) {
         balance += depositAmount;
         System.out.println( "You've successfully deposited your money. Your new balance is: " + balance);
+        return depositAmount;
     };
 
     public void withdrawal(double withdrawalAmount) {
         balance -= withdrawalAmount;
         System.out.println("You've successfully withdrawn your money. Your new balance is: " + balance);
+    }
+    public void interestPay(double interestPercentage) {
+        double multiplier = (100 + interestPercentage)/100; //turns our percentage increase into a decimal and stored in the multiplier value
+        balance = balance * multiplier  ;
+        System.out.println("A " + interestPercentage + "% interest has been added to your account. Your new balance is " + balance);
     }
 
 

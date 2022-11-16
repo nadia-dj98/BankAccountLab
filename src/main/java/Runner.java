@@ -10,7 +10,6 @@ public class Runner {
         nadia.deposit(500);
         nadia.withdrawal(500);
         nadia.deposit(4000);
-
-
+        nadia.interestPay(1);
     }
 }
